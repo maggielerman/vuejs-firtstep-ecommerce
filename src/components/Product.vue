@@ -1,6 +1,7 @@
 <template>
     <div class="card my-5">
         <div class="card-body">
+            <img width="150px" src="{{product.image}}" alt="GL Vue Cart Logo">
             <h5 class="text-center card-title">{{product.title}}</h5>
             <p class="text-center text-muted card-text display-4">${{Number(product.price).toFixed()}}</p>
             <button :disabled="isInCart" @click="$emit('add-to-cart',product)" class="btn btn-info form-control">
